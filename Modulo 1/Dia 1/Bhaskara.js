@@ -1,6 +1,6 @@
 //bhaskara
 
-//let a = 1, b = 8, c = -9
+//let a = 1, b = 8, c = -9 //resultado com duas raízes 
 let a = 1, b = -4, c = 4
 
 

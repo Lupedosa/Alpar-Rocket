@@ -24,5 +24,5 @@ console.log("Raiz única: x = " + x)
     
     console.log("Raiz 1: x1 = " + x1)
     console.log("Raiz 2: x2 = " + x2)
-
+//teste
 }

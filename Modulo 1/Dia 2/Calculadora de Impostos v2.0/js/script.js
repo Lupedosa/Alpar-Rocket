@@ -1,14 +1,10 @@
-function formatarReal(valor) {
-    return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-}
+const desconto = Math.random() < 0.5 //chance aleatória. 0.5 = 50/50
 
- const desconto = Math.random() < 0.5 //chance aleatória. 0.5 = 50/50
-
- if(desconto == true){
-    alert("Olha só! Você tem direito a um desconto de 10%! Que sorte");
-    preco = preco * 0.90;
-    console.log(desconto)
-}
+    if(desconto == true){
+        alert("Olha só! Você tem direito a um desconto de 10%! Que sorte");
+        preco = preco * 0.90;
+        console.log(desconto)
+    }
 
 
 document.getElementById('calculate').addEventListener('click', function () {
@@ -16,13 +12,9 @@ document.getElementById('calculate').addEventListener('click', function () {
     let codigo = document.getElementById('codigo').value;
     const local = document.getElementById('local').value;
 
-    const ICMS = Math.floor(Math.random() * 14) + 12; // 14 é a diferença de 25 e 12 (ICM máximo e mínimo) +1, e o +12 é a soma do ICMS mínimo para garantir que o valor será igual ou maior que 12 
-
-    
+    const ICMS = Math.floor(Math.random() * 14) + 12; // 14 é a diferença de 25 e 12 (ICM máximo e mínimo) +1, e o +12 é a soma do ICMS mínimo para garantir que o valor será igual ou maior que 12   
 
     let precoBackup = preco
-
-    
 
     if (preco > 0 && local === "SP" || local === "RJ" || local === "Outro"){
 
@@ -48,14 +40,11 @@ document.getElementById('calculate').addEventListener('click', function () {
                     break;
             }
 
-            alert("Valor do seu produto: " + preco + "\nFrete: " + frete + "\nICMS: " + ICMS + "%\nTotal: " + total);
+            alert("Valor do seu produto: R$ " + preco + "\nFrete: R$ " + frete + "\nICMS: " + ICMS + "%\nTotal: R$ " + total);
 
         }else{
 
-            let direitoadesconto = "Sem direito a desconto dessa vez. Quem sabe na próxima!";
             let total = preco + (preco * (ICMS / 100));
-
-            alert(direitoadesconto);
 
             let frete;
 
@@ -74,7 +63,7 @@ document.getElementById('calculate').addEventListener('click', function () {
                     break;
             }
 
-            alert("Valor do seu produto: " + preco + "\nFrete: " + frete + "\nICMS: " + ICMS + "%\nTotal: " + total);
+            alert("Valor do seu produto: R$ " + preco + "\nFrete: R$ " + frete + "\nICMS: " + ICMS + "%\nTotal: R$ " + total);
 
         }
 

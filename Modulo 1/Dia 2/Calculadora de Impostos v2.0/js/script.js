@@ -29,7 +29,7 @@ document.getElementById('calculate').addEventListener('click', function () {
         if(codigo == "OFERTA15"){
             if(desconto == true){
                 alert("Infelizmente, nossos descontos não são acumulativos. Apenas o desconto do seu cupom será considerado :D");
-                preco = precoBackup * 1.10
+                preco = precoBackup;
                 }
 
             let precocomdesconto = preco * 0.85;

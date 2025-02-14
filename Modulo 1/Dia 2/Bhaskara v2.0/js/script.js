@@ -17,7 +17,7 @@ if(delta < 0 || a == 0){
 
         const x = (-b + sqrtDelta) / 2*a
 
-        let total = "Raiz única: x = " + x;
+        let total = "Raiz única: x = " + x.toFixed(2);
         document.getElementById('total').innerHTML = (total);
 
     }else{
@@ -25,7 +25,7 @@ if(delta < 0 || a == 0){
         const x1 = (-b + sqrtDelta) / 2*a
         const x2 = (-b - sqrtDelta) / 2*a
         
-        let total = "Raiz 1: x1 = " + x1 + "<br> Raiz 2: x2 = " + x2;
+        let total = "Raiz 1: x1 = " + x1.toFixed(2) + "<br> Raiz 2: x2 = " + x2.toFixed(2);
         document.getElementById('total').innerHTML = (total);
 
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Calculadora de Impostos</title>
+</head>
+<body>
+    <main id="container">
+        <div id="calculator">
+            <h2>
+                Calculadora de Impostos
+            </h2>
+
+            <div id="input_box">
+                <div class="input-field">
+                    <label for="preco">Digite o valor do seu produto</label>
+                    <input type="number" id="preco">
+                </div>
+
+                <div class="input-field">
+                    <label for="codigo">Digite o código de desconto (opcional)</label>
+                    <input type="text" id="codigo">
+                </div>
+
+                <div class="input-field">
+                    <label for="local">Selecione a sua localidade</label>
+                    <input list="estados" id="local">
+                    <datalist id="estados">
+                        <option value="RJ"></option>
+                        <option value="SP"></option>
+                        <option value="Outro"></option>
+                    </datalist>
+
+                </div>
+            </div>
+                    <button id="calculate">
+                        Calcular
+                    </button>         
+        </div>
+    </main>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

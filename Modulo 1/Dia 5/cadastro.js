@@ -12,12 +12,20 @@ while(comando != 4){
         
         if (comando == 1){
 
+
+            let aReceberNome = prompt("Digite o nome do usuário que deseja adicionar")
+            let aReceberIdade = parseInt(prompt("Digite a idade do usuário que deseja adicionar"))
+            while(isNaN(aReceberIdade)){
+                aReceberIdade = parseInt(prompt("Idade inválida.\n\nDigite a idade do usuário que deseja adicionar"))
+            }
+            let aReceberEmail = prompt("Digite o email do usuário que deseja adicionar")
+
             dados.push({
-            nome: prompt("Digite o nome do usuário que deseja adicionar"),
-            idade:parseInt(prompt("Digite a idade do usuário que deseja adicionar")),
-            email: prompt("Digite o email do usuário que deseja adicionar"),
+                nome: aReceberNome,
+                idade: aReceberIdade,
+                email: aReceberEmail
             })
-            
+
             alert("Usuário " + dados[dados.length - 1].nome + " adicionado à lista!");
 
             
@@ -25,7 +33,7 @@ while(comando != 4){
 
             if (dados.length > 0) {
 
-                let listaCadastros = dados.map(usuario => `Nome: ${usuario.nome}, Idade: ${usuario.idade}, Email: ${usuario.email}\n`)
+                let listaCadastros = dados.map(usuario => `Nome: ${usuario.nome}, Idade: ${usuario.idade}, Email: ${usuario.email}\n`);
 
                 let email = prompt(`Digite o email do usuário que deseja remover\n\n${listaCadastros.join("")}`);
                 
@@ -35,11 +43,11 @@ while(comando != 4){
 
                     dados.splice(index, 1)
 
-                    alert(`Usuário com email ${email} removido`)
+                    alert(`Usuário com email ${email} removido`);
 
                 }else{
 
-                    alert("Email inválido")
+                    alert("Email inválido");
                 }
 
             } else {
@@ -52,7 +60,7 @@ while(comando != 4){
 
             if (dados.length > 0) {
 
-                let listaCadastros = dados.map(usuario => `Nome: ${usuario.nome}, Idade: ${usuario.idade}, Email: ${usuario.email}\n`)
+                let listaCadastros = dados.map(usuario => `Nome: ${usuario.nome}, Idade: ${usuario.idade}, Email: ${usuario.email}\n`);
 
                 alert(`Usuários cadastrados:\n\n${listaCadastros.join("")}`);
 
@@ -69,7 +77,7 @@ while(comando != 4){
 
     } else {
 
-        comando = prompt("Por favor, digite um comando válido")
+        comando = prompt("Por favor, digite um comando válido");
 
     }
 }

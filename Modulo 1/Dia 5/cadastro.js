@@ -27,7 +27,7 @@ while(comando != 4){
 
                 let listaCadastros = dados.map(usuario => `Nome: ${usuario.nome}, Idade: ${usuario.idade}, Email: ${usuario.email}\n`)
 
-                let email = prompt(`Digite o email do usuário que deseja remover\n\n${listaCadastros}`);
+                let email = prompt(`Digite o email do usuário que deseja remover\n\n${listaCadastros.join("")}`);
                 
                 let index = dados.findIndex(usuario => usuario.email === email)
                                 
